@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std; // intruksi terhadap compiler untuk menggunakan semua fungsi yang terkait untuk kerangka yang sama
+int main(){ // tipe data yang akan dikembalikan nilainya kembali,karena memiliki nilai balik maka diberikan perintah return nilai (return 0)
+    int p,l,t,v; 
+    string dimensi;
+
+    cout<<"MENGHITUNG VOLUME BALOK"<<endl; // untuk menghasilkan output tulisan tersebut,endl berguna menyisipkan karakter NewLine atau mengatur pindah baris
+    cout<<"----------------------------------"<<endl; // digunakan untuk menghasilkan output yang akan membuat bingkai dari tulisan "MENGHITUNG VOLUME BALOK"
+    cout<<"Masukan Panjang : "; //  digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
+    cin>>p; // digunakan untuk meminta data atau inputan panjang balok dari user
+    cout<<"Masukan Lebar   : "; // digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
+    cin>>l; // untuk meminta data atau iputan lebar balok dari user
+    cout<<"Masukan Tinggi  : ";  // digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
+    cin>>t; // untuk meminta data tinggi balok
+    cout<<"Masukan Satuan (mm,cm,m) Dimensi Balok : "; // mencetak atau menghasilkan output
+    cin>>dimensi; // untuk meminta satuan dari balok
+    cout<<endl; // berguna menyisipkan karakter NewLine atau mengatur pindah baris
+    
+    v=p*l*t; // rumus volume balok 
+    
+    cout<<"Volume Balok    = "<<v<<" "<<dimensi<<"3"; // mencetak output hasil perhitungan volume balok tersebut
+    return 0; //menyatakan program berakhir atau mengembalikan nilai pada inputan yang terakhir
+
+}
