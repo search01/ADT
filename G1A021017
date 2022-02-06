@@ -1,25 +1,68 @@
-#include <iostream>
-#include <string>
-using namespace std; // intruksi terhadap compiler untuk menggunakan semua fungsi yang terkait untuk kerangka yang sama
-int main(){ // tipe data yang akan dikembalikan nilainya kembali,karena memiliki nilai balik maka diberikan perintah return nilai (return 0)
-    int p,l,t,v; 
-    string dimensi;
 
-    cout<<"MENGHITUNG VOLUME BALOK"<<endl; // untuk menghasilkan output tulisan tersebut,endl berguna menyisipkan karakter NewLine atau mengatur pindah baris
-    cout<<"----------------------------------"<<endl; // digunakan untuk menghasilkan output yang akan membuat bingkai dari tulisan "MENGHITUNG VOLUME BALOK"
-    cout<<"Masukan Panjang : "; //  digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
-    cin>>p; // digunakan untuk meminta data atau inputan panjang balok dari user
-    cout<<"Masukan Lebar   : "; // digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
-    cin>>l; // untuk meminta data atau iputan lebar balok dari user
-    cout<<"Masukan Tinggi  : ";  // digunakan untuk menghasilkan atau mencetak tulisan tersebut yang nantinya akan diminta inputan user
-    cin>>t; // untuk meminta data tinggi balok
-    cout<<"Masukan Satuan (mm,cm,m) Dimensi Balok : "; // mencetak atau menghasilkan output
-    cin>>dimensi; // untuk meminta satuan dari balok
-    cout<<endl; // berguna menyisipkan karakter NewLine atau mengatur pindah baris
-    
-    v=p*l*t; // rumus volume balok 
-    
-    cout<<"Volume Balok    = "<<v<<" "<<dimensi<<"3"; // mencetak output hasil perhitungan volume balok tersebut
-    return 0; //menyatakan program berakhir atau mengembalikan nilai pada inputan yang terakhir
+#include <iostream> // pengarah yang mengatakan kepada kompiler untuk meletakan kode dari header file iostream.h kedalam program
 
-}
+using namespace std;  // intruksi terhadap compiler untuk menggunakan semua fungsi yang terkait untuk kerangka yang sama
+
+int main() { // tipe data yang akan dikembalikan nilainya kembali,karena memiliki nilai balik maka diberikan perintah return nilai (return 0), { adalah awal eksekusi program
+
+ double nilai_tugas; // digunakan untuk tipe data bilangan desimal
+
+ double nilai_uts; // digunakan untuk tipe data bilangan desimal
+
+ double nilai_uas; // digunakan untuk tipe data bilangan desimal
+ 
+ // nilai tugas
+
+ cout << "Masukkan nilai Tugas:" << endl; // untuk mencetak output,endl berguna menyisipkan karakter NewLine atau mengatur pindah baris
+
+ cin >> nilai_tugas; // untuk meminta inputan nilai tugas tersebut
+
+ if (nilai_tugas > 100) { // kondisi dimana jika nilai atau inputan tidak sesuai maka... ( dilanjutkan di cout), { adalah awal eksekusi program
+
+   cout << "Nilai tidak valid" << endl; // mencetak tulisan tersebut apabila kondisi if terpenuhi
+
+   return 0; // mengembalikan nilai ke inputan terakhir
+
+ } // akhir dari eksekusi program
+ 
+ // nilai UTS
+
+ cout << "Masukkan nilai UTS:" << endl; // penjelasan pada nilai UTS sama dengan nilai Tugas dikarenakan kode yang digunakan sama
+
+ cin >> nilai_uts;
+
+ if (nilai_uts > 100) {
+
+   cout << "Nilai tidak valid" << endl;
+
+   return 0;
+
+ }
+
+// nilai UAS
+
+ cout << "Masukkan nilai UAS:" << endl; // penjelasan pada nilai UAS sama dengan nilai tugas dikarenakan kode yang digunakan sama 
+
+ cin >> nilai_uas;
+
+ if (nilai_uas > 100) {
+
+   cout << "Nilai tidak valid" << endl;
+
+   return 0;
+
+ }
+
+ double nilai_keseluruhan = nilai_tugas * 0.2 // untuk menghitung nilai dari keselurahan inputan
+
+   + nilai_uts * 0.3
+
+   + nilai_uas * 0.5;
+
+ cout << "Total Nilai Keseluruhan =  " // mencetak total nilai keseluruhan yang telah didapatkan dari inputan 
+
+   << nilai_keseluruhan << endl;
+
+ return 0; // mengakhiri proses program atau mengembalikan nilai pada inputan yang terakhir
+
+} // akhir dari eksekusi program 
